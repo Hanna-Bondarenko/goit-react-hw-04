@@ -1,0 +1,12 @@
+.imageCard {
+  width: 300px; /* Фіксована ширина для зображення */
+  height: 200px; /* Фіксована висота для зображення */
+}
+
+.imageCard img {
+  width: 100%; /* Заповнює весь контейнер */
+  height: 100%;
+  object-fit: contain; /* Забезпечує обрізку зображення, якщо воно більше контейнера */
+  border-radius: 8px;
+  background-color: #333;
+}
