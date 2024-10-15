@@ -1,24 +1,23 @@
 .searchBar {
   width: 100%;
-  background-color: #1976d2; /* Синій фон */
+  background-color: #1976d2;
   padding: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Тінь для хедера */
-  position: fixed; /* Закріплює хедер зверху */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000; /* Для перекриття інших елементів */
+  z-index: 1000;
 }
 
 .searchForm {
   display: flex;
-  width: 60%; /* Задаємо ширину форми для пошуку */
-  max-width: 800px; /* Максимальна ширина для великого екрану */
+  width: 60%;
+  max-width: 800px;
 }
 
-/* Стиль для інпуту */
 .searchInput {
   flex-grow: 1;
   padding: 10px;
@@ -26,19 +25,18 @@
   border: none;
   border-radius: 5px 0 0 5px;
   outline: none;
-  background-color: #333; /* Темний фон для інпуту */
+  background-color: #333;
   color: white;
 }
 
 .searchInput::placeholder {
-  color: #999; /* Світліший текст для placeholder */
+  color: #999;
 }
 
-/* Стиль для кнопки пошуку */
 .searchButton {
   padding: 10px 20px;
   font-size: 18px;
-  background-color: #0d47a1; /* Темно-синя кнопка */
+  background-color: #0d47a1;
   color: white;
   border: none;
   border-radius: 0 5px 5px 0;
@@ -46,15 +44,12 @@
 }
 
 .searchButton:hover {
-  background-color: #1565c0; /* Зміна кольору при наведенні */
+  background-color: #1565c0;
 }
 
-/* Медіа-запити для підлаштування під різні екрани */
-
-/* Середні екрани (планшети) */
 @media (max-width: 768px) {
   .searchForm {
-    width: 80%; /* Робимо форму трохи ширшою для планшетів */
+    width: 80%;
   }
 
   .searchInput {
@@ -68,10 +63,9 @@
   }
 }
 
-/* Мобільні екрани */
 @media (max-width: 480px) {
   .searchForm {
-    width: 90%; /* Збільшуємо ширину форми для мобільних */
+    width: 90%;
   }
 
   .searchInput {

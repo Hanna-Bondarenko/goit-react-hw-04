@@ -1,11 +1,16 @@
 import { useState } from "react";
+import { toast } from "react-hot-toast";
 import styles from "./SearchBar.module.css";
+
 const SearchBar = ({ onSearch }) => {
   const [inputValue, setInputValue] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (inputValue.trim() === "") return;
+    if (inputValue.trim() === "") {
+      toast.error("Please enter a search term!");
+      return;
+    }
     onSearch(inputValue);
     setInputValue("");
   };

@@ -6,6 +6,7 @@ import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
 import LoadMoreBtn from "./components/LoadMoreBtn/LoadMoreBtn";
 import ImageModal from "./components/ImageModal/ImageModal";
 import { fetchImages } from "./services/imageApi"; // API запит
+import { Toaster } from "react-hot-toast"; // Додаємо для відображення повідомлень
 
 const App = () => {
   const [images, setImages] = useState([]);
@@ -58,6 +59,8 @@ const App = () => {
   return (
     <div>
       <SearchBar onSearch={handleSearch} />
+      <Toaster position="top-center" reverseOrder={false} />{" "}
+      {/* Виведення повідомлень */}
       {loading && <Loader />}
       {error && <ErrorMessage />}
       {images.length > 0 && (

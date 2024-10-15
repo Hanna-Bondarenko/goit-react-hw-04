@@ -1,16 +1,16 @@
 .gallery {
   display: flex;
-  flex-wrap: wrap; /* Забезпечує перенесення елементів на новий рядок */
-  justify-content: space-between; /* Додає відстань між елементами */
-  gap: 16px; /* Відстань між елементами */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
   list-style: none;
   padding: 0;
 }
 
 .galleryItem {
-  flex: 1 1 calc(25% - 16px); /* Розміщує елементи у рядок, займаючи 25% ширини */
+  flex: 1 1 calc(25% - 16px);
   box-sizing: border-box;
-  margin-bottom: 16px; /* Відступи знизу для кращого вигляду */
+  margin-bottom: 16px;
   overflow: hidden;
   border-radius: 8px;
   list-style: none;
@@ -23,12 +23,12 @@
 } */
 @media (max-width: 768px) {
   .galleryItem {
-    flex: 1 1 calc(50% - 16px); /* Два елементи у рядку на менших екранах */
+    flex: 1 1 calc(50% - 16px);
   }
 }
 
 @media (max-width: 480px) {
   .galleryItem {
-    flex: 1 1 100%; /* Один елемент у рядку на дуже малих екранах */
+    flex: 1 1 100%;
   }
 }
