@@ -23,12 +23,13 @@ const App = () => {
 
     const fetchData = async () => {
       setLoading(true);
+      setError(false);
       try {
         const data = await fetchImages(query, page); // API запит
         setImages((prevImages) => [...prevImages, ...data.results]); // Зберігаємо отримані зображення
         setTotalPages(data.total_pages); // Зберігаємо загальну кількість сторінок
       } catch (error) {
-        setError(true);
+        setError(error.message);
       } finally {
         setLoading(false);
       }
@@ -62,7 +63,7 @@ const App = () => {
       <Toaster position="top-center" reverseOrder={false} />{" "}
       {/* Виведення повідомлень */}
       {loading && <Loader />}
-      {error && <ErrorMessage />}
+      {error && <ErrorMessage error={error} />}
       {images.length > 0 && (
         <ImageGallery images={images} onImageClick={openModal} />
       )}
